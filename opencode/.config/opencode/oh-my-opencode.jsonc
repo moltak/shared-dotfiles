@@ -1,0 +1,79 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
+  "google_auth": false,
+  "agents": {
+    "sisyphus": {
+      "model": "anthropic/claude-opus-4-6",
+      //"model": "google/gemini-3.1-pro-preview",
+      "temperature": 1,
+      "variables": "medium",
+      "reasoningEffort": "medium"
+    },
+    "prometheus": {
+      "model": "google/gemini-3.1-pro-preview",
+      "temperature": 1,
+      "variables": "low",
+      "reasoningEffort": "low"
+    },
+    "atlas": {
+      "model": "google/gemini-3.1-pro-preview",
+      "temperature": 1,
+      "variables": "low",
+      "reasoningEffort": "low"
+    },
+    "oracle": { // architecture design, debugging
+      "model": "google/gemini-3.1-pro-preview"
+    },
+    "explore": { // quick exploration, brainstorming
+      "model": "opencode/gpt-5-nano"
+    },
+    "metis": { // plan consultant
+      "model": "google/gemini-3.1-pro-preview",
+      "temperature": 1,
+      "variables": "medium",
+      "reasoningEffort": "medium"
+    }
+  },
+  "categories": {
+    "visual-engineering": {
+      "model": "google/gemini-3.1-pro-preview"
+    },
+    "ultrabrain": {
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "xhigh"
+    },
+    "artistry": {
+      "model": "google/gemini-3.1-pro-preview",
+      "variant": "max"
+    },
+    "quick": {
+      "model": "opencode/gpt-5-nano"
+    },
+    "unspecified-low": {
+      "model": "opencode/gpt-5-nano"
+    },
+    "unspecified-high": {
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "max"
+    },
+    "writing": {
+      "model": "openai/gpt-5.2"
+    }
+  },
+  "sisyphus_agent": {
+    "disabled": false,
+    "default_builder_enabled": true,
+    "planner_enabled": true,
+    "replace_plan": false
+  },
+  "tmux": {
+    "enabled": true,
+    "layout": "main-vertical",
+    "main_pane_size": 60,
+    "main_pane_min_width": 120,
+    "agent_pane_min_width": 40
+  },
+  "disabled_hooks": [
+    "keyword-detector"
+  ]
+}
